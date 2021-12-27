@@ -5,7 +5,7 @@
 I will be installing dwm on FreeBSD 13.0-RELEASE on VirtualBox. This tutorial assumes you already have FreeBSD 13.0-RELEASE installed on your system.
 <br><br>
 
-***Step 1.*** First we will install ```git``` as you will need this to clone some repositories later on.
+***Step 1.*** First we will install ```git``` as you will need this to clone some repositories later on. Make sure you are root or use sudo/doas to install packages ont he system.
 
 ```
 pkg install -y git
