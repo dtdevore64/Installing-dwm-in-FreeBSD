@@ -104,7 +104,7 @@ X11LIB=/usr/local/lib
 ***Step 12.*** Since we made the changes to the file in Step 11 we have to install one more package which is ```pkgconf``` for it to work because if not when we compile---it will give us errors so we will install the package and then compile.
 
 ```
-pkg install pkgconf
+pkg install -y pkgconf
 make clean install
 ```
 
