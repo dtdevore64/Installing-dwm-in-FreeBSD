@@ -5,39 +5,21 @@
 I will be installing dwm on FreeBSD 13.0-RELEASE on VirtualBox. This tutorial assumes you already have FreeBSD 13.0-RELEASE installed on your system.
 <br><br>
 
-***Step 1.*** First we will install ```git``` as you will need this to clone some repositories later on. Make sure you are root or use sudo/doas to install the packages.
+***Step 1.*** First we will need to install some packages. I will list all of the packages and what they are before installing them
+
+git -- Needed to clone repositories
+xorg -- X11 Display Server
+slim and slim-themes -- lightweight login manager for X11, allowing the initialization of a graphical session by entering username and password in a login screen
+pkgconf -- program which helps to configure compiler and linker flags for development libraries 
+dmenu -- Dynamic Menu for X
 
 ```
-pkg install -y git
-```
-
-<br><br>
-
-***Step 2.*** Next we will install ```xorg```.
-
-```
-pkg install -y xorg
+pkg install git xorg dmenu slim slim-themes pkgconf
 ```
 
 <br><br>
 
-***Step 3.*** Next we will install ```dmenu```.
-
-```
-pkg install -y dmenu
-```
-
-<br><br>
-
-***Step 4.*** Next we will install ```slim``` and ```slim-themes```.
-
-```
-pkg install -y slim slim-themes
-```
-
-<br><br>
-
-***Step 5.*** Now we will edit the ```/etc/rc.conf``` file to add a few lines in there to enable dbus and slim
+***Step 2.*** Now we will edit the ```/etc/rc.conf``` file to add a few lines in there to enable dbus and slim
 
 ```
 dbus_enable="YES"
@@ -46,7 +28,7 @@ slim_enable="YES"
 
 <br><br>
 
-***Step 6.*** We need to create our ```~/.xinitrc``` file to add one line so we can execute dwm
+***Step 3.*** We need to create our ```~/.xinitrc``` file to add one line so we can execute dwm
 
 ```
 exec dwm
@@ -54,7 +36,7 @@ exec dwm
 
 <br><br>
 
-***Step 7.*** Since we installed ```git``` earlier on we will now start cloning dwm
+***Step 4.*** Since we installed ```git``` earlier on we will now start cloning dwm
 
 ```
 git clone https://git.suckless.org/dwm
@@ -62,7 +44,7 @@ git clone https://git.suckless.org/dwm
 
 <br><br>
 
-***Step 8.*** After cloning the repository we need to ```cd``` into it to edit the ```config.mk``` file. Make sure the file says these exact lines:
+***Step 5.*** After cloning the repository we need to ```cd``` into it to edit the ```config.mk``` file. Make sure the file says these exact lines:
 
 ```
 X11INC = /usr/local/include
@@ -75,7 +57,7 @@ FREETYPEINC = /usr/local/include/freetype2
 
 <br><br>
 
-***Step 9.*** We made changes to the file so now we have to compile it
+***Step 6.*** We made changes to the file so now we have to compile it
 
 ```
 make clean install
@@ -83,7 +65,7 @@ make clean install
 
 <br><br>
 
-***Step 10.*** Time to clone the st terminal now
+***Step 7.*** Time to clone the st terminal now
 
 ```
 git clone https://git.suckless.org/st
@@ -91,7 +73,7 @@ git clone https://git.suckless.org/st
 
 <br><br>
 
-***Step 11.*** After cloning the repository we need to ```cd``` into it to edit the ```config.mk``` file. Make sure the file says these exact lines:
+***Step 8.*** After cloning the repository we need to ```cd``` into it to edit the ```config.mk``` file. Make sure the file says these exact lines:
 
 ```
 X11INC=/usr/local/include
@@ -101,7 +83,7 @@ X11LIB=/usr/local/lib
 
 <br><br>
 
-***Step 12.*** Since we made the changes to the file in Step 11 we have to install one more package which is ```pkgconf``` for it to work because if not when we compile---it will give us errors so we will install the package and then compile.
+***Step 9.*** Since we made the changes to the file in Step 11 we have to install one more package which is ```pkgconf``` for it to work because if not when we compile---it will give us errors so we will install the package and then compile.
 
 ```
 pkg install -y pkgconf
@@ -110,7 +92,7 @@ make clean install
 
 <br><br>
 
-***Step 13.*** All we have to do now is just reboot and it will bring us into dwm
+***Step 10.*** All we have to do now is just reboot and it will bring us into dwm
 
 ```
 reboot
