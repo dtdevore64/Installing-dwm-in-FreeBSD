@@ -46,10 +46,9 @@ slim_enable="YES"
 
 <br><br>
 
-***Step 6.*** We need to create our ```.xinitrc``` file to add a line so we can execute dwm
+***Step 6.*** We need to create our ```~/.xinitrc``` file to add one line so we can execute dwm
 
 ```
-nano ~/.xinitrc
 exec dwm
 ```
 
