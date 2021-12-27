@@ -9,7 +9,7 @@ I will be installing dwm on FreeBSD 13.0-RELEASE on VirtualBox. This tutorial as
 
 git -- Needed to clone repositories<br>
 xorg -- X11 Display Server<br>
-slim and slim-themes -- lightweight login manager for X11, allowing the initialization of a graphical session by entering username and password in a login screen<br>
+slim and slim-themes -- lightweight login manager for X11, allowing the initialization of a graphical session<br>
 pkgconf -- program which helps to configure compiler and linker flags for development libraries<br> 
 dmenu -- Dynamic Menu for X<br>
 
