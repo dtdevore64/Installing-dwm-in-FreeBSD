@@ -10,7 +10,7 @@ I will be installing dwm on FreeBSD 13.0-RELEASE on VirtualBox. This tutorial as
 ```
 pkg install git xorg dmenu slim slim-themes pkgconf
 ```
-<br><br>
+<br>
 
 git -- Needed to clone repositories<br>
 xorg -- X11 Display Server<br>
