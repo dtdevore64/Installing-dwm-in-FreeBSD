@@ -12,11 +12,13 @@ pkg install git xorg dmenu slim slim-themes pkgconf
 ```
 <br>
 
-git -- Needed to clone repositories<br>
-xorg -- X11 Display Server<br>
-slim and slim-themes -- lightweight login manager for X11, allowing the initialization of a graphical session<br>
-pkgconf -- program which helps to configure compiler and linker flags for development libraries<br> 
-dmenu -- Dynamic Menu for X<br>
+| Package | Description |
+| --------- | ----------- |
+| git | Needed to clone repositories |
+| xorg | X Display Server |
+| slim slim-themes | Lightweight login manager for X11, allowing for the initialization of a graphical session |
+| pkgconf | program which helps to configure compiler and linker flags for development libraries |
+| dmenu | Dynamic Menu for X |
 
 <br><br>
 
