@@ -8,7 +8,7 @@ I will be installing dwm on FreeBSD 13.0-RELEASE on VirtualBox. This tutorial as
 ***Step 1.*** First we will need to install some packages. I will list all of the packages and a brief description of them after installing them.
 
 ```
-pkg install git xorg dmenu slim slim-themes pkgconf
+pkg install git xorg slim slim-themes pkgconf dmenu
 ```
 <br><br>
 
@@ -16,8 +16,9 @@ pkg install git xorg dmenu slim slim-themes pkgconf
 | --------- | ----------- |
 | git | Needed to clone repositories |
 | xorg | X Display Server |
-| slim slim-themes | Lightweight login manager for X11, allowing for the initialization of a graphical session |
-| pkgconf | program which helps to configure compiler and linker flags for development libraries |
+| slim | Lightweight login manager for X11, allowing for the initialization of a graphical session |
+| slim-themes | Themes for the Slim login manager |
+| pkgconf | Program which helps to configure compiler and linker flags for development libraries |
 | dmenu | Dynamic Menu for X |
 
 <br><br>
